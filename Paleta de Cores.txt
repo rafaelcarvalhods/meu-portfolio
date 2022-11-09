@@ -1,0 +1,9 @@
+Paleta de cores
+
+70aae7 little boy blue
+000022 oxford blue
+2D608B blue gray
+625F63 granite gray
+C9CEBD ash gray
+FF0022 red pigment
+780000 barn red
