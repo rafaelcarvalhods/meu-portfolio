@@ -12,29 +12,32 @@
 
   <div class="home-page">
     <header>
-      <div class="logo">Rafael Carvalho</div>
+      <a href="/" class="logo">Rafael Carvalho</a>
       <nav class="nav-bar">
         <ul class="menu">
-          <li class="menu-item"> <a class="menu-links" href="#">Sobre Mim</a> </li>
-          <li class="menu-item"> <a class="menu-links" href="#">Habilidades</a> </li>
-          <li class="menu-item"> <a class="menu-links" href="#">Projetos</a> </li>
-          <li class="menu-item"> <a class="menu-links" href="#">Contato</a> </li>
+          <li class="menu-item"> <a class="menu-links" href="#about">Sobre Mim</a> </li>
+          <li class="menu-item"> <a class="menu-links" href="#skills">Habilidades</a> </li>
+          <li class="menu-item"> <a class="menu-links" href="#projects">Projetos</a> </li>
+          <li class="menu-item"> <a class="menu-links" href="#contact">Contato</a> </li>
         </ul>
       </nav>
     </header>
   
-    <section class="profile">
-      <img class="profile-picture" src="./assets/images/rafa-perfil-styled-cortada.png" alt="Foto Rafael">
+    <section id="profile" class="profile-section">
+      <div class="profile-content">
+        <img class="profile-picture" src="./assets/images/rafa-perfil-styled-cortada.png" alt="Foto Rafael">
       <div class="profile-presentation">
         <p class="mb1">Oi, eu sou Rafael Carvalho,</p>
         <p class="mb1" id="dev">Desenvolvedor Front-end,</p>
         <p>Este é o meu perfil profissional.</p>
       </div>
+      </div>
+      
     </section>
   </div>
   
 
-  <section class="about">
+  <section id="about" class="about-section">
     <div class="about-container">
       <h2>Sobre mim</h2>
       <!-- <h3>Curiosidade e Coragem</h3> -->
@@ -50,7 +53,7 @@
     </div>
   </section>
 
-  <section class="skills">
+  <section id="skills" class="skills-section">
     <div class="skills-container">
       <h2>Habilidades</h2>
       <div class="skills-icons">
@@ -59,8 +62,8 @@
           <img class="icon-2" src="./assets/images/html5_icon_color.svg" alt="">
           <span class="skills-names">HTML</span>
         </div>
-        <div class="skills-icon-box">
-          <img class="icon-1" src="./assets/images/css3_icon.svg" alt="">
+        <div id="css-box" class="skills-icon-box">
+          <img id="css" class="icon-1" src="./assets/images/css3_icon.svg" alt="">
           <img class="icon-2" src="./assets/images/css3_icon_color.svg" alt="">
           <span class="skills-names">CSS</span>
         </div>
@@ -83,7 +86,7 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section id="projects" class="projects-section">
     <div class="projects-container">
       <h2>Projetos</h2>
       <div class="projects-content">
@@ -109,7 +112,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact-section">
     <div class="contact-container">
       <h2>Contato</h2>
       <p>Deixe seu contato e fique por dentro das novidades no meu perfil.</p>

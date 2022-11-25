@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -30,7 +31,7 @@ h3{
 }
 
 header{
-  height: 5%;
+  height: 80px;
   background-color: white;
   color: #000022;
   font-size: 20px;
@@ -39,8 +40,11 @@ header{
   justify-content: space-between;
   align-items: center;
 }
-
+a{
+  text-decoration: none;
+}
 .logo{
+  color: #000022;
   font-size: 36px;
   margin-left: 24px;
 }
@@ -79,27 +83,31 @@ header{
   color: #625F63;
 }
 
-.profile{
+.profile-section{
   position: relative;
-  height: 90%;
+  height: calc(100vh - 80px);
   background: linear-gradient(-60deg, #000022 25%, #2D608B);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   /* padding: 36px; */
   align-items: center;
 }
 
+.profile-content{
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+
+}
+
 .profile-picture{
-  position: absolute;
-  left: 20%;
   width: 230px;
   /* border-radius: 50% 50% 50% 50%; */
 }
 
 .profile-presentation{
-  position: absolute;
-  right: 20%;
-  margin-left: 36px;
   font-weight: 100;
   font-size: 40px;
 }
@@ -112,13 +120,14 @@ header{
   margin-bottom: 12px;
 }
 
-.about{
-  background-color: #434144;
+.about-section{
+  background-color: #D6FFF3;
   height: 100vh;
 }
 
-.about h2 {
+.about-section h2 {
   text-align: center;
+  color: #2D608B;
 }
 
 .about-container{
@@ -133,7 +142,8 @@ header{
 .about-container p{
   font-family: 'Open Sans';
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
+  color: #000022;
 }
 
 .motto-div{
@@ -143,14 +153,14 @@ header{
   font-weight: 300;
 }
 .motto{
-  color: #70aae7;
+  color: #2D608B;
 }
 
-.skills{
+.skills-section{
   background: linear-gradient(#2D608B, #70aae7);
 }
 
-.skills h2{
+.skills-section h2{
   color: black;
   text-align: center;
 }
@@ -178,6 +188,7 @@ header{
 .icon-1{
   width: 72px;
   height: 72px;
+  transition: 0.5s;
 }
 
 .icon-2{
@@ -188,25 +199,28 @@ header{
   opacity: 0;
   top: 0;
   left: 0;
+  transition: 0.5s;
 }
 
 .skills-icon-box:hover .icon-2{
   visibility: visible;
   opacity: 1;
   transform: scale(1.1);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .skills-icon-box:hover #nodejs{
   visibility: visible;
   opacity: 1;
   transform: scale(1.175);
-  transition: 0.3s;
+  transition: 0.5s;
 }
+
 
 .skills-icon-box:hover .icon-1{
   visibility: hidden;
   opacity: 0;
+  transform: scale(1.1);
 }
 
 .skills-names{
@@ -215,6 +229,7 @@ header{
   margin-top: 10px;
   font-size: 20px;
   color: black;
+  transition: 0.5s;
 }
 
 .skills-icon-box:hover .skills-names{
@@ -223,8 +238,8 @@ header{
   color: white;
 }
 
-.projects{
-  background-color: #434144;
+.projects-section{
+  background-color: #D6FFF3;
 }
 
 .projects-container{
@@ -238,6 +253,7 @@ header{
 
 .projects-container h2{
   text-align: center;
+  color: #2D608B;
 }
 
 .projects-content{
@@ -252,8 +268,9 @@ header{
   flex-direction: column;
   width: 232px;
   height: 340px;
-  background-color: rgba(255, 255, 255, 0.824);
+  /* background-color: rgba(255, 255, 255, 0.824); */
   border-radius: 12px;
+  border: 1px solid #2D608B;
 }
 
 .project-circle{
@@ -281,7 +298,7 @@ header{
   margin-top: 20px;
 }
 
-.contact{
+.contact-section{
   height: 100vh;
 }
 
@@ -338,8 +355,8 @@ input[type="submit"]{
 
 .social-medias{
   display: flex;
-  justify-content: space-around;
-  width: 180px;
+  justify-content: space-between;
+  width: 200px;
   padding: 16px;
 }
 
@@ -378,35 +395,27 @@ input[type="submit"]{
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 1186px){
-  .profile-picture{
-    left: 120px;
-  }
-
-  .profile-presentation{
-    right: 120px;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     header{
       visibility: inherit;
     }
 
+    .profile-content{
+      flex-direction: column;
+    }
+
     .profile-picture{
       width: 180px;
-      left: 90px;
     }
 
     .profile-presentation{
+      text-align: center;
       font-size: 32px;
-      right: 90px;
     }
   }
 
-  @media screen and (max-width: 425px) {
-    .home-page{
-      margin: auto;
+  @media screen and (max-width: 546px) {
+    body{
+      overflow-x: hidden;
     }
-    
   }
-}
