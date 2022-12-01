@@ -6,7 +6,7 @@
 
 
 body{
-  min-width: 100vw;
+  /* min-width: 100vw; */
   box-sizing: border-box;
   font-family: 'Londrina Solid', cursive;
   font-weight: 300;
