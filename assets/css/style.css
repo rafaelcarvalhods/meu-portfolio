@@ -4,7 +4,9 @@
   box-sizing: border-box;
 }
 
+
 body{
+  min-width: 100vw;
   box-sizing: border-box;
   font-family: 'Londrina Solid', cursive;
   font-weight: 300;
@@ -429,9 +431,20 @@ input[type="submit"]{
 
   }
 
-  @media screen and (max-width: 525px) {
+  @media screen and (max-width: 545px) {
+    html{
+      overflow-x: hidden;
+    }
     body{
       overflow-x: hidden;
+    }
+
+    .about-container p{
+      text-align: justify;
+    }
+
+    .skills-container{
+      height: 100%;
     }
 
     .projects-container{
