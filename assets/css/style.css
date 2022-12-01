@@ -137,6 +137,7 @@ a{
   max-width: 700px;
   height: 100%;
   margin: auto;
+  padding: 20px;
 }
 
 .about-container p{
@@ -169,15 +170,20 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 700px;
+  align-items: center;
+  /* max-width: 700px; */
   height: 75vh;
   margin: auto;
+  padding: 20px;
 }
 
 .skills-icons{ /*skills-icons*/
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   list-style: none;
+  gap: 80px;
+  padding: 20px;
 }
 
 .skills-icon-box{
@@ -216,7 +222,6 @@ a{
   transition: 0.5s;
 }
 
-
 .skills-icon-box:hover .icon-1{
   visibility: hidden;
   opacity: 0;
@@ -240,6 +245,7 @@ a{
 
 .projects-section{
   background-color: #D6FFF3;
+
 }
 
 .projects-container{
@@ -249,6 +255,7 @@ a{
   max-width: 800px;
   margin: auto;
   height: 100vh;
+  padding: 20px;
 }
 
 .projects-container h2{
@@ -258,7 +265,10 @@ a{
 
 .projects-content{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
 }
 
 .project-box{
@@ -405,17 +415,34 @@ input[type="submit"]{
     }
 
     .profile-picture{
-      width: 180px;
+      width: 210px;
     }
 
     .profile-presentation{
       text-align: center;
-      font-size: 32px;
+    }
+
+    .skills-icons{
+      flex-wrap: wrap;
+    }
+
+    .skills-icon-box{
+    
     }
   }
 
-  @media screen and (max-width: 546px) {
+  @media screen and (max-width: 525px) {
     body{
       overflow-x: hidden;
+    }
+
+    .projects-container{
+      height: 100%;
+    }
+
+    @media screen and (max-width: 375px){
+      body{
+        overflow-x: hidden;
+      }
     }
   }
