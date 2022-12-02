@@ -449,7 +449,7 @@ input[type="submit"]{
     }
 
     .profile-picture{
-      width: 180px;
+      /* width: 180px; */
     }
 
     .profile-presentation{
