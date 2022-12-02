@@ -419,11 +419,13 @@ input[type="submit"]{
     }
 
     .profile-section{
-      min-height: 100vh;
+      height: 100%;
     }
 
     .profile-content{
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .profile-picture{
