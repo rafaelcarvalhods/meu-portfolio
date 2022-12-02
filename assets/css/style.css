@@ -486,8 +486,12 @@ input[type="submit"]{
         overflow-x: hidden;
       }
 
+      .profile-content{
+        gap: 10px;
+      }
+
       .profile-picture{
-        width: 160px;
+        /* width: 160px; */
       }
 
       .profile-presentation{
