@@ -43,8 +43,10 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+
 a{
   text-decoration: none;
+
 }
 .logo{
   color: #000022;
@@ -58,12 +60,21 @@ a{
 .menu{
   list-style: none;
   display: flex;
-  margin-right: 24px;
+  gap: 24px;
+}
+
+.menu a{
+  display: block;
+  padding: 16px
+}
+
+.label-menu, .checkbox {
+  display: none;
 }
 
 .menu-item{
   margin-left: 24px ;
-  display: inline-block;
+  /* display: inline-block; */ /* estava impedindo os itens ficarem na vertical no menu mobile*/
 }
 
 .menu-links:link{
@@ -414,8 +425,71 @@ input[type="submit"]{
 }
 
   @media screen and (max-width: 850px) {
-    header{
-      display: none;
+    .menu{
+      display: block; /*display none ñ me permitirá usar o transition para block*/
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background: #70aae7;
+      color: #D6FFF3;
+      text-align: center;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+
+    .menu a{
+      padding: 16px 0;
+      /* margin-inline: 16px; */
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 0;
+    }
+
+    .label-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-block: 16px;
+      cursor: pointer;
+    }
+
+    .hamburger{
+      border-top: 2px solid #000022;
+      width: 20px;
+    }
+
+    .hamburger::before, .hamburger::after{
+      content: " ";
+      display: block;
+      height: 2px;
+      width: 20x;
+      background: currentColor;
+      margin-top: 5px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .checkbox:checked ~ .menu {
+      /* display: block; */ /*não é possível usar transition de none para block*/
+      height: calc(100vh - 80px);
+      visibility: visible;
+      /* overflow-y: auto; */
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger {
+      border-top-color: transparent;
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger::before{
+      transform: rotate(135deg);
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger::after{
+      transform: rotate(-135deg);
+      top: -7px;
     }
 
     .profile-section{
